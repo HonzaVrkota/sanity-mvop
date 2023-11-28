@@ -2,13 +2,18 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'post',
-  title: 'Post',
+  title: 'Příspěvek',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
+    }),
+    defineField({
+      type: 'color',
+      name: 'titleColor',
+      title: 'Barva nadpisu',
     }),
     defineField({
       name: 'slug',
@@ -38,6 +43,17 @@ export default defineType({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+    }),
+    defineField({
+      name: 'tags',
+      title: 'Tagy',
+      type: 'array',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'showContainer',
+      type: 'boolean',
+      title: 'Zobrazit container',
     }),
   ],
   preview: {

@@ -33,4 +33,40 @@ export interface Post {
   excerpt?: string
   mainImage?: ImageAsset
   body: PortableTextBlock[]
+  tags?: string[]
+  showContainer?: boolean
+  titleColor?: ColorFieldType
+}
+
+export interface ColorFieldType {
+  hsl: Hsl
+  alpha: number
+  _type: string
+  hex: string
+  hsv: Hsv
+  rgb: Rgb
+}
+
+export interface Hsl {
+  a: number
+  s: number
+  _type: string
+  h: number
+  l: number
+}
+
+export interface Hsv {
+  h: number
+  a: number
+  s: number
+  v: number
+  _type: string
+}
+
+export interface Rgb {
+  a: number
+  b: number
+  r: number
+  g: number
+  _type: string
 }

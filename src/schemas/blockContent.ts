@@ -56,5 +56,25 @@ export default defineType({
         ],
       },
     }),
+    // defineArrayMember({
+    //   type: 'object',
+    //   name: 'Ikona plus text',
+    //   title: 'Ikona plus text',
+    //   fields: [
+    //     {
+    //       name: 'icon',
+    //       title: 'Ikona',
+    //       type: 'image',
+    //       options: {
+    //         hotspot: true,
+    //       },
+    //     },
+    //     {
+    //       name: 'text',
+    //       title: 'Text',
+    //       type: 'string',
+    //     },
+    //   ],
+    // }),
   ],
 })

@@ -66,13 +66,41 @@ export default function ProjectSlugRoute(
           <div className="post__cover--none" />
         )}
         <div className="post__container">
-          <h1 className="post__title">{post.title}</h1>
+          <h1
+            className="post__title"
+            style={{
+              color: post.titleColor.hex,
+            }}
+          >
+            {post.title}
+          </h1>
           <p className="post__excerpt">{post.excerpt}</p>
           <p className="post__date">{formatDate(post._createdAt)}</p>
           <div className="post__content">
             <PortableText value={post.body} />
           </div>
         </div>
+        <div className="">
+          {post.tags?.map((tag) => <p key={tag}>{tag}</p>)}
+        </div>
+
+        {post.showContainer ? (
+          <>
+            <div
+              className=""
+              style={{
+                width: '100%',
+                height: '100vh',
+                backgroundColor: 'red',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <p>this is container</p>
+            </div>
+          </>
+        ) : null}
       </section>
     </Container>
   )
